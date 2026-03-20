@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelingArt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app">
+        <header class="topbar">
+            <div class="brand">
+                <h1>PixelingArt</h1>
+                <p class="subtitle">Make pixel art.</p>
+            </div>
+
+            <div id="controls" class="panel" aria-label="PixelingArt controls">
+                <div class="control">
+                    <label for="gridSize">Grid Size</label>
+                    <input type="number" id="gridSize" min="10" max="50" value="16" inputmode="numeric">
+                </div>
+
+                <div class="control">
+                    <label for="colorPicker">Color</label>
+                    <input type="color" id="colorPicker" value="#000000">
+                </div>
+
+                <button id="eraserToggle" class="btn" type="button">Eraser Off</button>
+                <button id="fullScreenBtn" class="btn" type="button">Full Screen</button>
+                <button id="scrapBtn" class="btn danger" type="button" title="Erase everything">
+                    <svg class="btnIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M9 3h6m-8 4h10m-9 0 1 14h6l1-14M10 11v6m4-6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    scrap it
+                </button>
+                <button id="downloadBtn" class="btn primary" type="button">Download PNG</button>
+            </div>
+        </header>
+
+        <a
+            class="topRightLogoLink"
+            href="https://gazolina99.github.io/Gazolina/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Gazolina (opens in a new tab)"
+        >
+            <span class="logoSquare" aria-hidden="true">
+                <img class="logoImg" src="assets/logo.png" alt="Gazolina logo">
+            </span>
+        </a>
+
+        <section id="canvasWrap">
+            <div id="canvas" class="canvas" aria-label="Pixel canvas"></div>
+        </section>
+    </main>
+
+    <footer class="footer" aria-label="PixelingArt footer">
+        <div class="footerText">Developed by Gazolina, Gazmir Cepele @ 2026 Rights Resevered</div>
+        <a
+            class="footerLogoLink"
+            href="https://gazolina99.github.io/Gazolina/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Gazolina (opens in a new tab)"
+        >
+            <img class="footerLogoImg" src="assets/logo.png" alt="Gazolina logo">
+        </a>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
